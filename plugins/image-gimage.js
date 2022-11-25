@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 *${htki} GOOGLE IMAGE ${htka}*
 🔎 *Result:* ${text}
 🌎 *Source:* Google
-`, wm, link, link, '🔗 URL', null, null, [['Next', `.image ${text}`],[null,null],[null,null]],m)
+`, [['Next', `.image ${text}`],[null,null],[null,null]],m)
 }
 handler.help = ['gimage <query>', 'image <query>']
 handler.tags = ['internet', 'tools']
