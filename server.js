@@ -27,7 +27,7 @@ function connect(conn, PORT) {
   //     socket.on('disconnect', unpipeEmit)
   // })
 
-  server.listen(process.env.PORT || PORT, () => {
+  server.listen(PORT, () => {
     console.log("App listened on port", PORT);
     if (opts["keepalive"]) keepAlive();
   });
