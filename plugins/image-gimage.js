@@ -4,24 +4,13 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   const res = await googleImage(text);
   let image = res.getRandom();
   let link = image;
-  conn.sendHydrated(
+
+  conn.sendButton(
     m.chat,
-    `
-*${htki} ɢᴏᴏɢʟᴇ ɪᴍᴀɢᴇ ${htka}*
-🔎 *Result:* ${text}
-🌎 *Source:* Google
-`,
+    "Nehhh Kak><",
     wm,
     link,
-    link,
-    "🔗 URL",
-    null,
-    null,
-    [
-      ["Next", `.image ${text}`],
-      [null, null],
-      [null, null],
-    ],
+    [["NEXT", `.image ${text}`]],
     m
   );
 };

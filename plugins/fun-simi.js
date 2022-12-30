@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import { Configuration, OpenAIApi } from "openai";
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -9,7 +9,7 @@ let handler = async (m, { text, args }) => {
   if (!args[0]) throw `Use example .simi halo`;
   const response = await openai.createCompletion({
     model: "text-davinci-003",
-    prompt: `${poc}`,
+    prompt: `${args}`,
     temperature: 0,
     max_tokens: 600,
     top_p: 1,
