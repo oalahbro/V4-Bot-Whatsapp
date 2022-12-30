@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import { Configuration, OpenAIApi } from "openai";
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 let handler = async (m, { conn, text, usedPrefix, command }) => {
