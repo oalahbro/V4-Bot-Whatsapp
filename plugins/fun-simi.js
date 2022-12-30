@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "sk-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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -18,6 +18,7 @@ let handler = async (m, { text, args }) => {
     presence_penalty: 0,
   });
   let res = response.data.choices[0].text;
+  console.log(res);
   m.reply(res);
 };
 handler.command = ["simi"];
