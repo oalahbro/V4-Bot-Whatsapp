@@ -2,7 +2,7 @@
 
 this is gak work
 
-const { WA_MESSAGE_STUB_TYPE } = (await import('@adiwajshing/baileys')).default
+const { WA_MESSAGE_STUB_TYPE } = (await import('@whiskeysockets/baileys')).default
 
 export async function all(m, chatUpdate) {
     let chat = global.db.data.chats[chatUpdate.jid]
